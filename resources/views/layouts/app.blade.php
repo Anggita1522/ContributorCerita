@@ -47,18 +47,18 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            {{-- <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
                     <li class="nav-item"><a class="nav-link" href="#komunitas">Komunitas</a></li>
                     <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
                     <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
                 </ul>
-            </div>
-            <div class="d-flex">
+            </div> --}}
+            {{-- <div class="d-flex">
                 <a href="#" class="btn btn-pastel btn-sm me-2">Login</a>
                 <a href="#" class="btn btn-pastel btn-sm">Register</a>
-            </div>
+            </div> --}}
         </div>
     </nav>
 

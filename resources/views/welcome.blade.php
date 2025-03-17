@@ -127,8 +127,8 @@
                 </ul>
             </div>
             <div class="d-flex">
-                <a href="#" class="btn btn-pastel btn-sm me-2">Login</a>
-                <a href="#" class="btn btn-pastel btn-sm">Register</a>
+                <a href="{{ route('login') }}" class="btn btn-pastel btn-sm me-2">Login</a>
+                <a href="{{ route('register') }}" class="btn btn-pastel btn-sm">Register</a>
             </div>
         </div>
     </nav>
