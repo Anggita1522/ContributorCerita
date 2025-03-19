@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title', 'Admin - WattPosh')</title>
 
     <!-- Bootstrap -->
@@ -29,12 +29,12 @@
             width: 250px;
             height: 100vh;
             background: #343a40;
-            transition: all 0.3s;
             position: fixed;
             left: 0;
             top: 0;
             color: white;
             padding-top: 20px;
+            transition: all 0.3s;
         }
 
         .profile {
@@ -100,7 +100,7 @@
     <div class="sidebar">
         <!-- Profile Admin -->
         <div class="profile">
-            <img src="{{ asset('images/admin-default.png') }}" alt="Admin Profile">
+            <img src="{{ Auth::user()->profile_picture ? asset('storage/profile/' . Auth::user()->profile_picture) : asset('assets/images/default.png') }}" alt="Admin Profile">
             <p>{{ Auth::user()->name }}</p>
         </div>
 
@@ -119,6 +119,23 @@
             <button class="btn btn-primary" id="menu-toggle">
                 <i class="fas fa-bars"></i>
             </button>
+
+            <!-- Dropdown Profil di Navbar -->
+            <div class="dropdown ms-auto">
+                <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown">
+                    <img src="{{ Auth::user()->profile_picture ? asset('storage/profile/' . Auth::user()->profile_picture) : asset('assets/images/default.png') }}" class="rounded-circle" width="40" height="40" alt="Profile">
+                    <span class="ms-2">{{ Auth::user()->name }}</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="{{ url('/admin/profile') }}"><i class="fas fa-user-edit me-2"></i> Edit Profile</a></li>
+                    <li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="dropdown-item text-danger"><i class="fas fa-sign-out-alt me-2"></i> Logout</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
         <main class="container mt-4">
