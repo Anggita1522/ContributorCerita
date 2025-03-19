@@ -105,11 +105,9 @@
         </div>
 
         <a href="{{ url('/user/dashboard') }}"><i class="fas fa-chart-line"></i><span> Dashboard</span></a>
-        <a href="{{ url('/user/stories') }}"><i class="fas fa-book"></i><span> My Stories</span></a>
-        <a href="{{ url('/user/payments') }}"><i class="fas fa-money-bill-wave"></i><span> Payments</span></a>
-        <a href="{{ url('/user/withdrawals') }}"><i class="fas fa-university"></i><span> Withdrawals</span></a>
-        <a href="{{ url('/user/favorites') }}"><i class="fas fa-heart"></i><span> Favorites</span></a>
-        <a href="{{ url('/user/settings') }}"><i class="fas fa-cog"></i><span> Settings</span></a>
+        <a href="{{ url('/user/daftar user') }}"><i class="fas fa-book"></i><span> My Stories</span></a>
+        <a href="{{ url('/user/data cerita') }}"><i class="fas fa-money-bill-wave"></i><span> Payments</span></a>
+        <a href="{{ url('/user/transaksi') }}"><i class="fas fa-university"></i><span> Withdrawals</span></a>
     </div>
 
     <!-- KONTEN -->
