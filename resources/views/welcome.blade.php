@@ -196,6 +196,35 @@
     </div>
 </div>
 
+<!-- MANFAAT MENJADI KONTRIBUTOR -->
+<div id="manfaat" class="section bg-light-pastel">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-4">Manfaat Menjadi Kontributor</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card p-3 rounded-4 shadow-sm">
+                    <img src="https://storyblok-cdn.ef.com/f/60990/1200x666/5793276192/ef-blog-18mei.jpg"
+                         alt="Hobi Menulis" class="img-fluid rounded-4">
+                    <p class="mt-3 fw-semibold">Menyalurkan hobi menulis</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 rounded-4 shadow-sm">
+                    <img src="https://img2.storyblok.com/1200x600/filters:focal(606x204:607x205):quality(90)/f/60990/1200x666/0d4dc9dfbd/ef-blog-8september.jpg"
+                         alt="Menambah Pengetahuan" class="img-fluid rounded-4">
+                    <p class="mt-3 fw-semibold">Menambah wawasan dan empati</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 rounded-4 shadow-sm">
+                    <img src="https://img2.storyblok.com/1200x600/filters:focal(527x278:528x279):quality(90)/f/60990/1200x666/f77bdc027b/membaca-buku.jpg"
+                         alt="Mendapatkan Penghasilan" class="img-fluid rounded-4">
+                    <p class="mt-3 fw-semibold">Berpeluang mendapatkan penghasilan</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
