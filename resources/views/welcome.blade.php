@@ -141,48 +141,40 @@
     </header>
 
     <!-- TENTANG WAATPOSH -->
-    <div id="tentang" class="section">
-        <div class="content-wrapper">
-            <img src="assets/images/tentang-waatposh.png" alt="Tentang WaatPosh">
-            <div>
-                <h2>Tentang WaatPosh</h2>
-                <p>WaatPosh adalah platform bagi penulis untuk berbagi cerita inspiratif dan pengalaman unik. Bergabunglah dalam komunitas kreatif dan berbagi kisahmu.</p>
-            </div>
+<div id="tentang" class="section">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between">
+        <!-- Gambar dengan sudut rounded -->
+        <div class="col-md-6">
+            <img src="https://img2.storyblok.com/600x340/filters:focal(527x278:528x279):quality(90)/f/60990/1200x666/f77bdc027b/membaca-buku.jpg"
+                 alt="Tentang WaatPosh"
+                 class="img-fluid rounded-4 shadow-lg">
+        </div>
+
+        <!-- Konten teks tentang WaatPosh -->
+        <div class="col-md-6 text-center text-md-start p-4">
+            <h2 class="fw-bold">Tentang WaatPosh</h2>
+            <p class="text-muted">
+                WaatPosh adalah sebuah platform inovatif yang didedikasikan untuk para penulis dan pecinta literasi.
+                Kami menyediakan tempat bagi para penulis dari berbagai latar belakang untuk berbagi cerita inspiratif,
+                fiksi, puisi, hingga artikel berbasis penelitian.
+            </p>
+            <p class="text-muted">
+                Dengan komunitas yang solid dan sistem penghargaan yang menarik, WaatPosh bukan hanya sekadar
+                tempat berbagi tulisan, tetapi juga ruang bagi para kreator untuk mengembangkan keterampilan menulis
+                dan membangun audiens mereka sendiri.
+            </p>
+            <p class="text-muted">
+                Keunikan kami terletak pada fitur interaktif seperti pembaca dapat memberikan umpan balik secara langsung,
+                mengikuti penulis favorit mereka, dan bahkan mendukung penulis melalui sistem donasi atau langganan premium.
+            </p>
+            <a href="#" class="btn btn-pastel mt-3">Pelajari Lebih Lanjut</a>
         </div>
     </div>
+</div>
 
-    <!-- PROGRAM KONTRIBUTOR -->
-    <div id="program" class="section bg-gray">
-        <h2>Apa Itu Program Kontributor?</h2>
-        <p>Program ini memberi kesempatan bagi penulis untuk mendapatkan eksposur lebih luas dan penghasilan dari tulisan mereka.</p>
-    </div>
 
-    <!-- MANFAAT -->
-    <div id="manfaat" class="section bg-light-pastel">
-        <h2>Manfaat Menjadi Kontributor</h2>
-        <div class="manfaat-container">
-            <div class="manfaat-item">
-                <img src="assets/images/icon-hobi.png" alt="Hobi">
-                <p>Menyalurkan hobi menulis</p>
-            </div>
-            <div class="manfaat-item">
-                <img src="assets/images/icon-pengetahuan.png" alt="Pengetahuan">
-                <p>Menambah wawasan dan empati</p>
-            </div>
-        </div>
-    </div>
 
-    <!-- KOMUNITAS -->
-    <div id="komunitas" class="section">
-        <h2>Komunitas WaatPosh</h2>
-        <p>Bergabung dengan komunitas penulis dan pembaca yang mendukung satu sama lain.</p>
-    </div>
 
-    <!-- KONTAK -->
-    <div id="kontak" class="section bg-gray">
-        <h2>Kontak Kami</h2>
-        <p>Email: support@waatposh.com</p>
-    </div>
 
 </body>
 </html>
