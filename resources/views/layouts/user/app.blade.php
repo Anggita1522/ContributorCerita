@@ -148,7 +148,6 @@
 </head>
 <body>
 
-
 <div class="wrapper" id="wrapper">
     <!-- SIDEBAR -->
     <div class="sidebar">
@@ -163,7 +162,6 @@
         <a href="{{ url('/user/payments') }}"><i class="fas fa-money-bill-wave"></i><span> Payments</span></a>
         <a href="{{ url('/user/withdrawals') }}"><i class="fas fa-university"></i><span> Withdrawals</span></a>
         <a href="{{ url('/user/favorites') }}"><i class="fas fa-heart"></i><span> Favorites</span></a>
-        <a href="{{ url('/user/settings') }}"><i class="fas fa-cog"></i><span> Settings</span></a>
     </div>
 
     <!-- KONTEN -->
@@ -184,6 +182,7 @@
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end shadow-sm">
                         <li><a class="dropdown-item" href="{{ url('/user/profile') }}"><i class="fas fa-user-edit me-2"></i> Edit Profile</a></li>
+                        <li><a class="dropdown-item" href="{{ url('/user/settings') }}"><i class="fas fa-cog me-2"></i> Settings</a></li>
                         <li>
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
@@ -200,7 +199,7 @@
             @yield('content')
         </main>
 
-        <!-- FOOTER (DIPINDAHKAN KE DALAM .content) -->
+        <!-- FOOTER -->
         <footer class="footer text-center py-3 mt-4">
             <p>&copy; 2025 WattPosh. Semua Hak Dilindungi.</p>
         </footer>

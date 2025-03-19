@@ -137,7 +137,7 @@
     <header class="header">
         <h1>Kontributor WaatPosh</h1>
         <p>Bergabung menjadi penulis di WaatPosh dan dapatkan penghasilan tambahan!</p>
-        <a href="#" class="btn btn-header">Gabung Sekarang</a>
+        <a href="{{ url('/register') }}" class="btn btn-header">Gabung Sekarang</a>
     </header>
 
     <!-- TENTANG WAATPOSH -->
