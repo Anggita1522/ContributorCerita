@@ -1,12 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.user.app')
 
 @section('content')
 <div class="container">
     <h2>Dashboard User</h2>
-    <p>Selamat datang User, {{ Auth::user()->name }}!</p>
-    <form action="{{ route('logout') }}" method="POST">
-        @csrf
-        <button type="submit">Logout</button>
-    </form>
+    <p>Selamat datang, {{ Auth::user()->name }}!</p>
 </div>
 @endsection
