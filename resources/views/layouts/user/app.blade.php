@@ -149,13 +149,13 @@
 <body>
 
 <div class="wrapper" id="wrapper">
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-        <!-- Profile Section -->
-        <div class="profile text-center py-3">
-            <img src="{{ Auth::user()->profile_picture ? asset('storage/profile/' . Auth::user()->profile_picture) : asset('assets/images/user-default.png') }}" class="rounded-circle" width="80" height="80" alt="User Profile">
-            <p class="mt-2 fw-semibold">{{ Auth::user()->name }}</p>
-        </div>
+ <!-- SIDEBAR -->
+<div class="sidebar">
+    <!-- Logo Section -->
+    <div class="profile text-center py-3">
+        <img src="{{ asset('assets/images/Logo.png') }}" width="100" height="100" alt="Company Logo">
+        <p class="mt-2 fw-semibold">{{ Auth::user()->name }}</p>
+    </div>
 
     <a href="{{ url('/user/dashboard') }}"><i class="fas fa-chart-line"></i><span> Dashboard</span></a>
     <a href="{{ url('/user/stories') }}"><i class="fas fa-book"></i><span> My Stories</span></a>
@@ -164,6 +164,7 @@
     <a href="{{ url('/user/favorites') }}"><i class="fas fa-heart"></i><span> Favorites</span></a>
     <a href="{{ url('/user/settings') }}"><i class="fas fa-cog"></i><span> Settings</span></a>
 </div>
+
 
 
     <!-- KONTEN -->

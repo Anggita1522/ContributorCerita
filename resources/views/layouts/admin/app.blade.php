@@ -96,7 +96,7 @@
 <body>
 
 <div class="wrapper" id="wrapper">
- <!-- SIDEBAR -->
+<!-- SIDEBAR -->
 <div class="sidebar">
     <!-- Logo Section -->
     <div class="profile text-center py-3">
