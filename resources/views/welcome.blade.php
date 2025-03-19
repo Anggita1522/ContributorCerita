@@ -217,7 +217,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card p-3 rounded-4 shadow-sm">
-                    <img src="https://img2.storyblok.com/1200x600/filters:focal(527x278:528x279):quality(90)/f/60990/1200x666/f77bdc027b/membaca-buku.jpg"
+                    <img src="https://jenius-cocreate.s3.ap-southeast-1.amazonaws.com/assets/2018/05/14113900/6-Cara-Ubah-Hobi-2.jpg"
                          alt="Mendapatkan Penghasilan" class="img-fluid rounded-4">
                     <p class="mt-3 fw-semibold">Berpeluang mendapatkan penghasilan</p>
                 </div>
