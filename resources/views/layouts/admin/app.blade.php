@@ -111,38 +111,40 @@
     </div>
 
     <!-- KONTEN -->
-    <div class="content">
-        <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom px-3">
-            <div class="container-fluid">
-                <!-- Tombol Sidebar -->
-                <button class="btn btn-primary" id="menu-toggle">
-                    <i class="fas fa-bars"></i>
+<div class="content">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom px-3">
+        <div class="container-fluid">
+            <!-- Tombol Sidebar -->
+            <button class="btn btn-primary" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Dropdown Profil di Navbar -->
+            <div class="dropdown ms-auto">
+                <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown">
+                    <img src="{{ Auth::user()->profile_picture ? asset('storage/profile/' . Auth::user()->profile_picture) : asset('assets/images/default-profile.png') }}" class="rounded-circle border" width="40" height="40" alt="Profile">
+                    <span class="ms-2 d-none d-sm-inline">{{ Auth::user()->name }}</span>
                 </button>
-
-                <!-- Dropdown Profil di Navbar -->
-                <div class="dropdown ms-auto">
-                    <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown">
-                        <img src="{{ Auth::user()->profile_picture ? asset('storage/profile/' . Auth::user()->profile_picture) : asset('assets/images/default-profile.png') }}" class="rounded-circle border" width="40" height="40" alt="Profile">
-                        <span class="ms-2 d-none d-sm-inline">{{ Auth::user()->name }}</span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-                        <li><a class="dropdown-item" href="{{ url('/user/profile') }}"><i class="fas fa-user-edit me-2"></i> Edit Profile</a></li>
-                        <li>
-                            <form action="{{ route('logout') }}" method="POST">
-                                @csrf
-                                <button type="submit" class="dropdown-item text-danger"><i class="fas fa-sign-out-alt me-2"></i> Logout</button>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                    <li><a class="dropdown-item" href="{{ url('/user/profile') }}"><i class="fas fa-user-edit me-2"></i> Edit Profile</a></li>
+                    <li><a class="dropdown-item" href="{{ url('/user/settings') }}"><i class="fas fa-cog me-2"></i> Settings</a></li>
+                    <li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="dropdown-item text-danger"><i class="fas fa-sign-out-alt me-2"></i> Logout</button>
+                        </form>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <!-- MAIN CONTENT -->
-        <main class="container mt-4">
-            @yield('content')
-        </main>
+    <!-- MAIN CONTENT -->
+    <main class="container mt-4">
+        @yield('content')
+    </main>
+
 
         <!-- FOOTER (DIPINDAHKAN KE DALAM .content) -->
         <footer class="footer text-center py-3 mt-4">
