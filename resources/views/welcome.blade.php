@@ -172,6 +172,29 @@
     </div>
 </div>
 
+<!-- PROGRAM KONTRIBUTOR -->
+<div id="program" class="section bg-gray">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between">
+        <div class="col-md-6 text-center text-md-start p-4">
+            <h2 class="fw-bold">Apa Itu Program Kontributor?</h2>
+            <p class="text-muted">
+                Program Kontributor WaatPosh adalah peluang bagi para penulis untuk memperluas jangkauan karya mereka dan mendapatkan
+                apresiasi yang layak. Dengan bergabung, Anda dapat menulis berbagai cerita, opini, maupun artikel yang bisa dibaca oleh
+                ribuan orang di seluruh dunia.
+            </p>
+            <p class="text-muted">
+                Program ini tidak hanya memberikan kesempatan eksposur, tetapi juga memungkinkan penulis untuk mendapatkan
+                penghasilan dari tulisan mereka melalui sistem royalti, sponsor, atau langganan premium.
+            </p>
+            <a href="#" class="btn btn-pastel mt-3">Daftar Sekarang</a>
+        </div>
+        <div class="col-md-6">
+            <img src="https://storyblok-cdn.ef.com/f/60990/1200x666/5793276192/ef-blog-18mei.jpg"
+                 alt="Program Kontributor"
+                 class="img-fluid rounded-4 shadow-lg">
+        </div>
+    </div>
+</div>
 
 
 
