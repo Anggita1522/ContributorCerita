@@ -53,7 +53,13 @@ class AuthController extends Controller {
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('dashboard'); // Sesuaikan dengan rute dashboard
+            
+            // Redirect berdasarkan role
+            if (Auth::user()->role === 'admin') {
+                return redirect()->route('admin.dashboard'); // Admin ke /admin/dashboard
+            } else {
+                return redirect()->route('user.dashboard'); // User ke /user/dashboard
+            }
         }
 
         return back()->withErrors(['email' => 'Email atau password salah.'])->withInput();
