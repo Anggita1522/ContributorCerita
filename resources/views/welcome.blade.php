@@ -310,13 +310,37 @@
 
 
 
-<!-- KONTAK -->
-<div id="kontak" class="section bg-gray">
-    <div class="container text-center">
-        <h2 class="fw-bold">Kontak Kami</h2>
-        <p>Email: <a href="mailto:support@waatposh.com" class="text-decoration-none text-primary">support@waatposh.com</a></p>
+<!-- KONTAK KAMI - DESAIN MODERN -->
+<section id="kontak" class="section bg-gray">
+    <div class="container">
+        <h2 class="mb-4 fw-bold text-start">Kontak Kami</h2>
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <img src="https://lsp-ijji.com/public/img/contact.png" alt="Kontak Kami" class="img-fluid rounded shadow-lg">
+            </div>
+            <div class="col-lg-6 order-lg-1 text-start">
+                <p>Jika Anda memiliki pertanyaan atau ingin menghubungi kami, jangan ragu untuk mengirimkan pesan!</p>
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control rounded-pill" placeholder="Nama Anda" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control rounded-pill" placeholder="Email Anda" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control rounded-3" rows="4" placeholder="Pesan Anda" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-pastel rounded-pill">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
     </div>
-</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center mt-5 py-3 bg-light">
+    <p>&copy; 2025 WaatPosh. Semua Hak Cipta Dilindungi.</p>
+</footer>
 
 </body>
 </html>
