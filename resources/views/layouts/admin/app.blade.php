@@ -96,22 +96,21 @@
 <body>
 
 <div class="wrapper" id="wrapper">
-    <!-- SIDEBAR ADMIN -->
-    <div class="sidebar">
-        <!-- Profile Admin -->
-        <div class="profile">
-            <img src="{{ Auth::user()->profile_picture ? asset('storage/profile/' . Auth::user()->profile_picture) : asset('assets/images/default.png') }}" alt="Admin Profile">
-            <p>{{ Auth::user()->name }}</p>
-        </div>
-
-        <!-- Menu Sidebar -->
-        <a href="{{ url('/admin/dashboard') }}"><i class="fas fa-tachometer-alt"></i><span> Dashboard</span></a>
-        <a href="{{ url('/admin/users') }}"><i class="fas fa-users"></i><span> Users</span></a>
-        <a href="{{ url('/admin/stories') }}"><i class="fas fa-book"></i><span> Stories</span></a>
-        <a href="{{ url('/admin/payments') }}"><i class="fas fa-wallet"></i><span> Payments</span></a>
-        <a href="{{ url('/admin/withdrawals') }}"><i class="fas fa-university"></i><span> Withdrawals</span></a>
-        <a href="{{ url('/admin/settings') }}"><i class="fas fa-cog"></i><span> Settings</span></a>
+ <!-- SIDEBAR -->
+<div class="sidebar">
+    <!-- Logo Section -->
+    <div class="profile text-center py-3">
+        <img src="{{ asset('assets/images/Logo.png') }}" width="100" height="100" alt="Company Logo">
+        <p class="mt-2 fw-semibold">{{ Auth::user()->name }}</p>
     </div>
+
+    <a href="{{ url('/user/dashboard') }}"><i class="fas fa-chart-line"></i><span> Dashboard</span></a>
+    <a href="{{ url('/user/stories') }}"><i class="fas fa-book"></i><span> My Stories</span></a>
+    <a href="{{ url('/user/payments') }}"><i class="fas fa-money-bill-wave"></i><span> Payments</span></a>
+    <a href="{{ url('/user/withdrawals') }}"><i class="fas fa-university"></i><span> Withdrawals</span></a>
+    <a href="{{ url('/user/favorites') }}"><i class="fas fa-heart"></i><span> Favorites</span></a>
+    <a href="{{ url('/user/settings') }}"><i class="fas fa-cog"></i><span> Settings</span></a>
+</div>
 
     <!-- KONTEN -->
     <div class="content">
