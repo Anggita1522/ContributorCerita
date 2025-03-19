@@ -17,7 +17,8 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #fef3f7;
+            background: linear-gradient(to right, #fef3f7, #e9ecef);
+            color: #333;
         }
 
         .wrapper {
@@ -35,6 +36,7 @@
             color: white;
             padding-top: 20px;
             transition: all 0.3s;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
         }
 
         .profile {
@@ -47,11 +49,17 @@
             height: 80px;
             border-radius: 50%;
             border: 3px solid #6c757d;
+            transition: transform 0.3s;
+        }
+
+        .profile img:hover {
+            transform: scale(1.1);
         }
 
         .profile p {
             margin-top: 10px;
             font-weight: bold;
+            font-size: 1.1rem;
         }
 
         .sidebar a {
@@ -61,11 +69,28 @@
             color: white;
             text-decoration: none;
             transition: 0.3s;
+            border-radius: 5px;
+            margin: 5px 0;
+            position: relative;
         }
 
         .sidebar a:hover {
             background: #495057;
-            border-radius: 5px;
+        }
+
+        .sidebar a::after {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 100%;
+            background: transparent;
+            left: 0;
+            top: 0;
+            transition: background 0.3s;
+        }
+
+        .sidebar a:hover::after {
+            background: #007bff;
         }
 
         .sidebar i {
@@ -91,6 +116,34 @@
         .wrapper.toggled .content {
             margin-left: 70px;
         }
+
+        /* Navbar */
+        .navbar {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+        }
+
+        /* Button styles */
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        main {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -100,7 +153,7 @@
     <div class="sidebar">
         <!-- Profile Section -->
         <div class="profile text-center py-3">
-            <img src="{{ Auth::user()->profile_picture ? asset('storage/profile/' . Auth::user()->profile_picture) : asset('assets/images/user-default.png') }}" class="rounded-circle" width="80" height="80" alt="User Profile">
+            <img src="{{ Auth::user()->profile_picture ? asset('storage/profile/' . Auth::user()->profile_picture) : asset('assets/images/user-default.png') }}" class="rounded-circle" alt="User Profile">
             <p class="mt-2 fw-semibold">{{ Auth::user()->name }}</p>
         </div>
 
@@ -144,7 +197,7 @@
 </div>
 
 <!-- FOOTER -->
-<footer class="footer text-center py-3 mt-4 bg-light">
+<footer class="footer text-center py-3 mt-4">
     <p>&copy; 2025 WattPosh. Semua Hak Dilindungi.</p>
 </footer>
 
