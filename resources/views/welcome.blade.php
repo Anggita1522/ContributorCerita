@@ -226,7 +226,97 @@
     </div>
 </div>
 
+<!-- KOMUNITAS -->
+<div id="komunitas" class="section bg-light-pastel">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Gambar Komunitas -->
+            <div class="col-md-6 text-center">
+                <img src="https://png.pngtree.com/png-clipart/20221026/original/pngtree-cartoon-male-female-group-happy-for-company-class-study-congratulation-png-image_8728288.png"
+                     alt="Komunitas WaatPosh" class="img-fluid rounded-4 shadow">
+            </div>
 
+            <!-- Teks & Ikon Sosial -->
+            <div class="col-md-6 text-center text-md-start">
+                <h2 class="fw-bold">Komunitas WaatPosh</h2>
+                <p class="text-muted">
+                    Bergabunglah dengan komunitas penulis dan pembaca di WaatPosh yang saling mendukung.
+                    Dapatkan kesempatan untuk berkolaborasi, berdiskusi, dan mengembangkan keterampilan menulis bersama.
+                </p>
+
+                <!-- Ikon Media Sosial -->
+                <div class="social-icons mt-3">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+
+                <!-- Tombol -->
+                <a href="#" class="btn btn-pastel mt-4">Gabung Komunitas</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tambahkan ini di bagian <head> untuk FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<!-- Tambahkan ini di file CSS -->
+<style>
+    /* Section Styling */
+    .bg-light-pastel {
+        background-color: #ffe5ec;
+        padding: 80px 20px;
+    }
+
+    /* Gambar */
+    .img-fluid {
+        max-width: 90%;
+        height: auto;
+    }
+
+    /* Sosial Media */
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    .social-link {
+        font-size: 24px;
+        color: #555;
+        transition: 0.3s;
+    }
+    .social-link:hover {
+        color: #007bff;
+        transform: scale(1.2);
+    }
+
+    /* Tombol */
+    .btn-pastel {
+        background-color: #ffb3c6;
+        color: white;
+        font-weight: 600;
+        border-radius: 20px;
+        padding: 10px 20px;
+        border: none;
+        transition: 0.3s;
+    }
+    .btn-pastel:hover {
+        background-color: #f29caa;
+        transform: scale(1.05);
+    }
+</style>
+
+
+
+<!-- KONTAK -->
+<div id="kontak" class="section bg-gray">
+    <div class="container text-center">
+        <h2 class="fw-bold">Kontak Kami</h2>
+        <p>Email: <a href="mailto:support@waatposh.com" class="text-decoration-none text-primary">support@waatposh.com</a></p>
+    </div>
+</div>
 
 </body>
 </html>
