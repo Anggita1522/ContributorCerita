@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Auth;
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -19,6 +20,11 @@ Route::post('/register', [RegisteredUserController::class, 'store']);
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
 Route::post('/login', [AuthenticatedSessionController::class, 'store']);
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
+
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/'); // Redirect ke halaman welcome
+})->name('logout');
 
 // Redirect Dashboard Berdasarkan Role
 Route::get('/dashboard', function () {

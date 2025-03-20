@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -102,10 +103,14 @@
                     <div class="collapse" id="settingMenu">
                         <a class="collapse-item" href="#">
                             <i class="fas fa-user-circle"></i> Profile
-                        </a>
-                        <a class="collapse-item" href="#">
-                            <i class="fas fa-sign-out-alt"></i> Log Out
-                        </a>
+                            <li class="nav-item">
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+    </form>
+    <a class="nav-link" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+        <i class="fas fa-sign-out-alt"></i> Log Out
+    </a>
+</li>
                     </div>
                 </li>
             </ul>
