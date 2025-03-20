@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container">
-    <h2>Dashboard User</h2>
-    <p>Selamat datang, {{ Auth::user()->username }}!</p>
+        <h2>{{ Auth::user()->username }}</h2> <!-- Nama User sebagai Judul -->
+        <p>Selamat datang, {{ Auth::user()->username }}!</p>
 
     <!-- Grid untuk kotak cerita -->
     <div class="row mt-4">

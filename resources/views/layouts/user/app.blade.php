@@ -192,7 +192,7 @@
                     </button>
                     <ul class="dropdown-menu shadow-sm">
                         <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i> Write Stories</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-history me-2"></i> History Stories</a></li>
+                        <li><a class="dropdown-item" href="{{ url('/user/stories') }}"> <i class="fas fa-history me-2"></i> History Stories</a></li>
                     </ul>
                 </div>
 
