@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
@@ -37,3 +38,16 @@ Route::get('/user/dashboard', function () {
 Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth'])->name('admin.dashboard');
+
+// Route untuk Admin Categories
+Route::resource('categories', CategoryController::class);
+
+Route::prefix('admin')->group(function () {
+    // Halaman form tambah kategori
+    Route::get('/categories/create', [CategoryController::class, 'create'])
+        ->name('admin.categories.create');
+
+    // Menyimpan kategori baru
+    Route::post('/categories/store', [CategoryController::class, 'store'])
+        ->name('admin.categories.store');
+});

@@ -149,7 +149,7 @@
 <body>
 
 <div class="wrapper" id="wrapper">
- <!-- SIDEBAR -->
+<!-- SIDEBAR -->
 <div class="sidebar">
     <!-- Logo Section -->
     <div class="profile text-center py-3">
@@ -158,7 +158,7 @@
     </div>
 
     <a href="{{ url('/user/dashboard') }}"><i class="fas fa-chart-line"></i><span> Dashboard</span></a>
-    <a href="{{ url('/user/stories') }}"><i class="fas fa-book"></i><span> My Stories</span></a>
+    <a href="{{ url('/user/stories') }}"><i class="fas fa-book"></i><span>Stories</span></a>
     <a href="{{ url('/user/payments') }}"><i class="fas fa-money-bill-wave"></i><span> Payments</span></a>
     <a href="{{ url('/user/withdrawals') }}"><i class="fas fa-university"></i><span> Withdrawals</span></a>
     <a href="{{ url('/user/favorites') }}"><i class="fas fa-heart"></i><span> Favorites</span></a>
