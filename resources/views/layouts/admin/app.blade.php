@@ -104,10 +104,10 @@
             <p class="mt-2 fw-semibold">{{ Auth::user()->name }}</p>
         </div>
 
-        <a href="{{ url('/user/dashboard') }}"><i class="fas fa-chart-line"></i><span> Dashboard</span></a>
-        <a href="{{ url('/user/daftar user') }}"><i class="fas fa-book"></i><span> My Stories</span></a>
-        <a href="{{ url('/user/data cerita') }}"><i class="fas fa-money-bill-wave"></i><span> Payments</span></a>
-        <a href="{{ url('/user/transaksi') }}"><i class="fas fa-university"></i><span> Withdrawals</span></a>
+        <a href="{{ url('/admin/dashboard') }}"><i class="fas fa-chart-line"></i><span> Dashboard</span></a>
+        <a href="{{ url('/admin/daftar user') }}"><i class="fas fa-book"></i><span> My Stories</span></a>
+        <a href="{{ url('/admin/data cerita') }}"><i class="fas fa-money-bill-wave"></i><span> Payments</span></a>
+        <a href="{{ url('/admin/transaksi') }}"><i class="fas fa-university"></i><span> Withdrawals</span></a>
     </div>
 
     <!-- KONTEN -->
