@@ -43,30 +43,20 @@
             background-color: rgba(255, 255, 255, 0.1);
         }
 
-        .header-bg {
-            background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 0 0 20px 20px;
-        }
-
-        .card {
-            border-radius: 1rem;
-        }
-
-        .card-title {
-            font-size: 1.25rem;
-            font-weight: bold;
-        }
-
         .sidebar i {
             margin-right: 10px;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
         }
     </style>
 </head>
 
 <body>
     <div class="d-flex">
+        <!-- Sidebar -->
         <nav class="sidebar p-3">
             <h3 class="text-white">WaatPosh</h3>
             <ul class="nav flex-column">
@@ -76,20 +66,17 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="collapse" href="#categoryMenu" role="button" aria-expanded="false" aria-controls="categoryMenu">
+                    <a class="nav-link" href="#">
                         <i class="fas fa-list"></i> Kategori
                     </a>
-                    <div class="collapse" id="categoryMenu">
-                        <a class="collapse-item" href="{{ route('categories.create') }}">
-                            <i class="fas fa-plus"></i> Tambah Kategori
-                        </a>
-                        <a class="collapse-item" href="{{ route('categories.index') }}">
-                            <i class="fas fa-eye"></i> Tampilkan Kategori
-                        </a>
-                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="collapse" href="#storyMenu" role="button" aria-expanded="false" aria-controls="storyMenu">
+                    <a class="nav-link" href="{{ route('categories.create') }}">
+                        <i class="fas fa-plus"></i> Tambah Kategori
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#storyMenu">
                         <i class="fas fa-book-open"></i> Story
                     </a>
                     <div class="collapse" id="storyMenu">
@@ -99,7 +86,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="collapse" href="#paymentMenu" role="button" aria-expanded="false" aria-controls="paymentMenu">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#paymentMenu">
                         <i class="fas fa-credit-card"></i> Payment
                     </a>
                     <div class="collapse" id="paymentMenu">
@@ -109,7 +96,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="collapse" href="#settingMenu" role="button" aria-expanded="false" aria-controls="settingMenu">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#settingMenu">
                         <i class="fas fa-cog"></i> Setting
                     </a>
                     <div class="collapse" id="settingMenu">
@@ -124,43 +111,9 @@
             </ul>
         </nav>
 
-        <div class="container-fluid">
-            <header class="d-flex justify-content-between align-items-center p-3 header-bg">
-                <h1 style="text-align: center;">Dashboard Admin</h1>
-                <div>
-                    <a href="#" class="btn btn-light">
-                        <i class="fas fa-user-circle"></i> Profile
-                    </a>
-                </div>
-            </header>
-
-            <div class="row mt-4">
-                <div class="col-md-4 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Jumlah User</h5>
-                            <p class="card-text">FFFF</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Jumlah Admin</h5>
-                            <p class="card-text">FFFF</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">User/Actif</h5>
-                            <p class="card-text">FFFF</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <!-- Tempat untuk konten -->
+        <div class="content">
+            @yield('content')
         </div>
     </div>
 
