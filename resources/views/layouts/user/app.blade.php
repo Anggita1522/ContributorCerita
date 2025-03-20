@@ -149,26 +149,6 @@
 <body>
 
 <div class="wrapper" id="wrapper">
-<<<<<<< HEAD
-<!-- SIDEBAR -->
-<div class="sidebar">
-    <!-- Logo Section -->
-    <div class="profile text-center py-3">
-        <img src="{{ asset('assets/images/Logo.png') }}" width="100" height="100" alt="Company Logo">
-        <p class="mt-2 fw-semibold">{{ Auth::user()->name }}</p>
-    </div>
-
-    <a href="{{ url('/user/dashboard') }}"><i class="fas fa-chart-line"></i><span> Dashboard</span></a>
-    <a href="{{ url('/user/stories') }}"><i class="fas fa-book"></i><span>Stories</span></a>
-    <a href="{{ url('/user/payments') }}"><i class="fas fa-money-bill-wave"></i><span> Payments</span></a>
-    <a href="{{ url('/user/withdrawals') }}"><i class="fas fa-university"></i><span> Withdrawals</span></a>
-    <a href="{{ url('/user/favorites') }}"><i class="fas fa-heart"></i><span> Favorites</span></a>
-    <a href="{{ url('/user/settings') }}"><i class="fas fa-cog"></i><span> Settings</span></a>
-</div>
-
-
-
-=======
     <!-- SIDEBAR -->
     <div class="sidebar">
         <!-- Logo Section -->
@@ -184,19 +164,38 @@
         <a href="{{ url('/user/favorites') }}"><i class="fas fa-heart"></i><span> Favorites</span></a>
     </div>
 
->>>>>>> 016a1ea4ca56a9367dedbc2dec957141d0e65aec
-    <!-- KONTEN -->
-    <div class="content">
-        <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom px-3">
-            <div class="container-fluid">
-                <!-- Tombol Sidebar -->
-                <button class="btn btn-primary" id="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </button>
+<!-- KONTEN -->
+<div class="content">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom px-3">
+        <div class="container-fluid">
+            <!-- Tombol Sidebar -->
+            <button class="btn btn-primary" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="d-flex align-items-center ms-auto">
+    <!-- Search Bar -->
+    <form class="d-flex me-3" action="#" method="GET">
+        <input class="form-control me-2" type="search" name="query" placeholder="Search..." aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit">
+            <i class="fas fa-search"></i>
+        </button>
+    </form>
+
+                <!-- Dropdown Write -->
+                <div class="dropdown me-3">
+                    <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="fas fa-pen"></i> Write
+                    </button>
+                    <ul class="dropdown-menu shadow-sm">
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i> Write Stories</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-history me-2"></i> History Stories</a></li>
+                    </ul>
+                </div>
 
                 <!-- Dropdown Profil di Navbar -->
-                <div class="dropdown ms-auto">
+                <div class="dropdown">
                     <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown">
                         <img src="{{ Auth::user()->profile_picture ? asset('storage/profile/' . Auth::user()->profile_picture) : asset('assets/images/default-profile.png') }}" class="rounded-circle border" width="40" height="40" alt="Profile">
                         <span class="ms-2 d-none d-sm-inline">{{ Auth::user()->name }}</span>
@@ -213,7 +212,9 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
+
 
         <!-- MAIN CONTENT -->
         <main class="container mt-4">
