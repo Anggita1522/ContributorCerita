@@ -15,49 +15,39 @@
         .sidebar {
             min-height: 100vh;
             background-color: #343a40;
-            padding-top: 30px; /* Increased spacing at the top */
-            padding-left: 20px; /* Increased left padding */
-            padding-right: 20px; /* Increased right padding */
-            width: 250px; /* Set a fixed width for the sidebar */
+            padding-top: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 250px;
         }
 
         .sidebar h3 {
-            margin-bottom: 20px; /* Space between SB Admin title and the menu */
-            border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Separator below the title */
-            padding-bottom: 10px; /* Padding below the title */
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
         }
 
         .sidebar a {
             color: #ffffff;
-            font-size: 13px; /* Font size set to 13px */
-            display: flex; /* Use flex to align icon and text */
-            align-items: center; /* Center icons vertically with text */
-            padding: 10px; /* Padding for menu items */
-            margin-bottom: 5px; /* Space between menu items */
-            border-radius: 0.5rem; /* Rounded corners */
-            position: relative; /* For positioning the separator */
-            text-decoration: none; /* Remove underline from links */
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 0.5rem;
+            position: relative;
+            text-decoration: none;
         }
 
         .sidebar a:hover {
-            background-color: rgba(255, 255, 255, 0.1); /* Background color on hover */
-        }
-
-        /* Separator line */
-        .sidebar a + a::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            height: 1px;
-            background-color: rgba(255, 255, 255, 0.3); /* Color of the separator */
-            z-index: -1; /* Behind the text */
+            background-color: rgba(255, 255, 255, 0.1);
         }
 
         .header-bg {
             background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
             color: white;
+            padding: 20px;
+            border-radius: 0 0 20px 20px;
         }
 
         .card {
@@ -69,22 +59,8 @@
             font-weight: bold;
         }
 
-        .chart-container {
-            position: relative;
-            margin: auto;
-            height: 40vh;
-            width: 100%;
-        }
-
-        .pending-requests {
-            background-color: #fff;
-            border-radius: 0.5rem;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
         .sidebar i {
-            margin-right: 10px; /* Space between icon and text */
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -95,7 +71,7 @@
             <h3 class="text-white">WaatPosh</h3>
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">
+                    <a class="nav-link active" href="{{ route('dashboard') }}">
                         <i class="fas fa-fw fa-tachometer-alt"></i> Dashboard
                     </a>
                 </li>
@@ -104,10 +80,10 @@
                         <i class="fas fa-list"></i> Kategori
                     </a>
                     <div class="collapse" id="categoryMenu">
-                        <a class="collapse-item" href="#">
+                        <a class="collapse-item" href="{{ route('categories.create') }}">
                             <i class="fas fa-plus"></i> Tambah Kategori
                         </a>
-                        <a class="collapse-item" href="#">
+                        <a class="collapse-item" href="{{ route('categories.index') }}">
                             <i class="fas fa-eye"></i> Tampilkan Kategori
                         </a>
                     </div>
@@ -150,7 +126,7 @@
 
         <div class="container-fluid">
             <header class="d-flex justify-content-between align-items-center p-3 header-bg">
-                <h1>Dashboard</h1>
+                <h1 style="text-align: center;">Dashboard Admin</h1>
                 <div>
                     <a href="#" class="btn btn-light">
                         <i class="fas fa-user-circle"></i> Profile
@@ -185,7 +161,6 @@
                 </div>
             </div>
 
-            <!-- Tambahkan konten lainnya di sini jika diperlukan -->
         </div>
     </div>
 

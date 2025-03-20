@@ -39,15 +39,14 @@ Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth'])->name('admin.dashboard');
 
-// Route untuk Admin Categories
-Route::resource('categories', CategoryController::class);
 
-Route::prefix('admin')->group(function () {
-    // Halaman form tambah kategori
-    Route::get('/categories/create', [CategoryController::class, 'create'])
-        ->name('admin.categories.create');
 
-    // Menyimpan kategori baru
-    Route::post('/categories/store', [CategoryController::class, 'store'])
-        ->name('admin.categories.store');
+
+Route::prefix('admin/categories')->group(function () {
+    Route::get('/', [CategoryController::class, 'index'])->name('categories.index');
+    Route::get('/create', [CategoryController::class, 'create'])->name('categories.create');
+    Route::post('/', [CategoryController::class, 'store'])->name('categories.store'); // Pastikan ini ada
+    Route::get('/{category}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
+    Route::put('/{category}', [CategoryController::class, 'update'])->name('categories.update');
+    Route::delete('/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
 });

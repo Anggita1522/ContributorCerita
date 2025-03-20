@@ -2,29 +2,44 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category; // Pastikan ini ada
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    // Method untuk menampilkan form create kategori
-    public function create()
+    public function index()
     {
-        return view('admin.categories.create'); // Arahkan ke file Blade yang benar
+        $categories = Category::all();
+        return view('admin.categories.index', compact('categories')); // Sesuaikan jalur tampilan
     }
 
-    // Method untuk menyimpan data kategori ke database
+    public function create()
+    {
+        return view('layouts/admin.categories.create'); // Sesuaikan jalur tampilan
+    }
+
     public function store(Request $request)
     {
-        // Validasi input
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-        ]);
+        $request->validate(['name' => 'required']);
+        Category::create($request->only('name'));
+        return redirect()->route('categories.index')->with('success', 'Kategori berhasil ditambahkan.');
+    }
 
-        // Simpan data ke database
-        Category::create($validatedData);
+    public function edit(Category $category)
+    {
+        return view('admin.categories.edit', compact('category')); // Sesuaikan jalur tampilan
+    }
 
-        // Redirect dengan pesan sukses
-        return redirect()->route('admin.categories.create')->with('success', 'Kategori berhasil ditambahkan.');
+    public function update(Request $request, Category $category)
+    {
+        $request->validate(['name' => 'required']);
+        $category->update($request->only('name'));
+        return redirect()->route('categories.index')->with('success', 'Kategori berhasil diperbarui.');
+    }
+
+    public function destroy(Category $category)
+    {
+        $category->delete();
+        return redirect()->route('categories.index')->with('success', 'Kategori berhasil dihapus.');
     }
 }
