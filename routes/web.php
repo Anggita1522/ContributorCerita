@@ -6,6 +6,9 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\User\StoryController;
+use App\Http\Controllers\User\PaymentController;
+use App\Http\Controllers\User\WithdrawController;
 
 
 Route::get('/', function () {
@@ -44,6 +47,12 @@ Route::get('/user/dashboard', function () {
 Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth'])->name('admin.dashboard');
+
+Route::prefix('user')->middleware(['auth'])->group(function () {
+    Route::get('/stories', [StoryController::class, 'index'])->name('stories.index');
+    Route::get('/payments', [PaymentController::class, 'index'])->name('payments.index');
+    Route::get('/withdrawals', [WithdrawController::class, 'index'])->name('withdrawals.index');
+});
 
 
 
